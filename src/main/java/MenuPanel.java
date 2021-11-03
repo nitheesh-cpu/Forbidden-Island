@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ContainerEvent;
-import java.awt.event.ContainerListener;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -32,7 +30,7 @@ public class MenuPanel extends JFrame{
         }
 
         setLayout(new BorderLayout());
-        JLabel background=new JLabel(new ImageIcon("D:\\Nitheesh\\School\\2021-2022\\DataStructures\\ForbiddenIslandProject\\src\\main\\resources\\My Postt.png"));
+        JLabel background=new JLabel(new ImageIcon("images/My Postt.png"));
         add(background);
         background.setLayout(null);
         //difficulty input field
