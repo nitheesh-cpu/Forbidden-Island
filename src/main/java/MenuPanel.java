@@ -32,7 +32,8 @@ public class MenuPanel extends JFrame{
         }
 
         setLayout(new BorderLayout());
-        JLabel background=new JLabel(new ImageIcon("D:\\Nitheesh\\School\\2021-2022\\DataStructures\\ForbiddenIslandProject\\src\\main\\resources\\My Postt.png"));
+        JLabel background=new JLabel();
+        background.setIcon(new ImageIcon("src/main/resources/My Postt.png"));
         add(background);
         background.setLayout(null);
         //difficulty input field

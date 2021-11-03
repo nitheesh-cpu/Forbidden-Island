@@ -6,7 +6,7 @@ import java.io.IOException;
 public class GameRunner {
 
     public static void main(String[] args) {
-        FlatNordIJTheme.install();
+        FlatNordIJTheme.setup();
 
         MenuPanel bingoGame = new MenuPanel();
     }
