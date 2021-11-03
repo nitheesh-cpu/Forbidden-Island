@@ -19,6 +19,7 @@ public class MenuPanel extends JFrame{
         setSize(size);
         setPreferredSize(size);
         setMinimumSize(size);
+        setLocationRelativeTo(null);
         getClass().getClassLoader();
         try {
             Kurale = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Kurale-Regular.ttf"))).deriveFont(12f);
