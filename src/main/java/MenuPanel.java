@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ContainerEvent;
+import java.awt.event.ContainerListener;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -17,6 +19,7 @@ public class MenuPanel extends JFrame{
         setSize(size);
         setPreferredSize(size);
         setMinimumSize(size);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         getClass().getClassLoader();
         try {
@@ -30,7 +33,8 @@ public class MenuPanel extends JFrame{
         }
 
         setLayout(new BorderLayout());
-        JLabel background=new JLabel(new ImageIcon("images/My Postt.png"));
+        JLabel background=new JLabel();
+        background.setIcon(new ImageIcon(getClass().getClassLoader().getResource("My Postt.png")));
         add(background);
         background.setLayout(null);
         //difficulty input field
@@ -77,7 +81,11 @@ public class MenuPanel extends JFrame{
         help.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    HelpPanel helpPanel = new HelpPanel();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 
