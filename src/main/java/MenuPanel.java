@@ -19,6 +19,7 @@ public class MenuPanel extends JFrame{
         setSize(size);
         setPreferredSize(size);
         setMinimumSize(size);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         getClass().getClassLoader();
         try {
@@ -33,7 +34,7 @@ public class MenuPanel extends JFrame{
 
         setLayout(new BorderLayout());
         JLabel background=new JLabel();
-        background.setIcon(new ImageIcon("src/main/resources/My Postt.png"));
+        background.setIcon(new ImageIcon(getClass().getClassLoader().getResource("My Postt.png")));
         add(background);
         background.setLayout(null);
         //difficulty input field
@@ -80,7 +81,11 @@ public class MenuPanel extends JFrame{
         help.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    HelpPanel helpPanel = new HelpPanel();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 
