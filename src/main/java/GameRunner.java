@@ -9,5 +9,6 @@ public class GameRunner {
         FlatNordIJTheme.setup();
 
         MenuPanel bingoGame = new MenuPanel();
+
     }
 }
