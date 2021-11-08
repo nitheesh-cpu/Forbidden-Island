@@ -1,2 +1,3 @@
-public class GameBoard {
+public class GameBoard extends JFrame{
+
 }
