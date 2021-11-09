@@ -46,36 +46,36 @@ public class MenuPanel extends JFrame {
         JLabel difficultyLabel = new JLabel("Difficulty:");
         String[] difficultyStrings = {"--Select--", "Novice", "Normal", "Elite", "Legendary"};
         JComboBox difficultyDropdown = new JComboBox(difficultyStrings);
-        difficultyLabel.setBounds(231, 300, 149, 25);
+        difficultyLabel.setBounds(161, 270, 149, 25);
         difficultyLabel.setFont(PNBold);
-        difficultyLabel.setOpaque(true);
+//        difficultyLabel.setOpaque(true);
         difficultyLabel.setBackground(new Color(191, 105, 86));
-        difficultyLabel.setForeground(new Color(27, 26, 38));
-        difficultyDropdown.setBounds(230, 325, 150, 25);
+        difficultyLabel.setForeground(new Color(255, 255, 255));
+        difficultyDropdown.setBounds(160, 295, 150, 25);
         background.add(difficultyLabel);
         background.add(difficultyDropdown);
 
         //number of players input field
         JLabel playerLabel = new JLabel("Number of Players:");
         JSpinner playerSpinner = new JSpinner(new SpinnerNumberModel(4, 2, 4, 1));
-        playerSpinner.setBounds(590, 325, 150, 25);
-        playerLabel.setBounds(591, 300, 148, 25);
-        playerLabel.setOpaque(true);
+        playerSpinner.setBounds(690, 295, 150, 25);
+        playerLabel.setBounds(691, 270, 148, 25);
+        //playerLabel.setOpaque(true);
         playerLabel.setBackground(new Color(191, 105, 86));
         playerLabel.setFont(PNBold);
-        playerLabel.setForeground(new Color(27, 26, 38));
+        playerLabel.setForeground(new Color(255, 255, 255));
         background.add(playerLabel);
         background.add(playerSpinner);
 
         //How to Play button
         JButton help = new JButton("How to Play");
-        help.setBounds(410, 375, 150, 45);
+        help.setBounds(423, 375, 150, 45);
         help.setFont(PNBold);
         background.add(help);
 
         //Play button
         JButton play = new JButton("Play");
-        play.setBounds(410, 425, 150, 45);
+        play.setBounds(423, 425, 150, 45);
         play.setFont(PNBold);
         background.add(play);
 
