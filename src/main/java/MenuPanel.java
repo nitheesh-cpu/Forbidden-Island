@@ -31,21 +31,20 @@ public class MenuPanel extends JFrame{
         }
 
         setLayout(new BorderLayout());
-        JLabel background=new JLabel();
+        JLabel background = new JLabel();
         background.setIcon(new ImageIcon(getClass().getClassLoader().getResource("TitleScreen.png")));
         add(background);
         background.setLayout(null);
         //difficulty input field
-        JLabel difficultyLabel=new JLabel("Difficulty:");
-        String[] difficultyStrings = { "Novice", "Normal", "Elite", "Legendary"};
-        JComboBox difficultyDropdown=new JComboBox(difficultyStrings);
-        difficultyDropdown.setSelectedIndex(1);
-        difficultyLabel.setBounds(231,300,149,25);
+        JLabel difficultyLabel = new JLabel("Difficulty:");
+        String[] difficultyStrings = {"--Select--", "Novice", "Normal", "Elite", "Legendary"};
+        JComboBox difficultyDropdown = new JComboBox(difficultyStrings);
+        difficultyLabel.setBounds(231, 300, 149, 25);
         difficultyLabel.setFont(PNBold);
         difficultyLabel.setOpaque(true);
         difficultyLabel.setBackground(new Color(191, 105, 86));
         difficultyLabel.setForeground(new Color(27, 26, 38));
-        difficultyDropdown.setBounds(230,325,150,25);
+        difficultyDropdown.setBounds(230, 325, 150, 25);
         background.add(difficultyLabel);
         background.add(difficultyDropdown);
 
@@ -90,7 +89,19 @@ public class MenuPanel extends JFrame{
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                int difficulty = difficultyDropdown.getSelectedIndex();
+                int numPlayers = (int) playerSpinner.getValue();
+                System.out.println("Number of Players: " + numPlayers + "\nDifficulty: " + difficulty);
+                while (true) {
+                    try {
+                        if (difficulty == 0) throw new NumberFormatException();
+                    } catch (NumberFormatException ex) {
+                        JOptionPane.showMessageDialog(MenuPanel.super.getContentPane(), "You did not select a difficulty! \nPlease go back and select one!", "Missing Arguments!", JOptionPane.ERROR_MESSAGE);
+                        throw ex;
+                    }
+                    break;
+                }
+                GameState gameState = new GameState(difficulty, numPlayers);
             }
         });
     }

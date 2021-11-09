@@ -1,4 +1,5 @@
 public class GameState {
-    //test
-    //test2
+    public GameState(int difficulty, int numPlayers) {
+
+    }
 }
