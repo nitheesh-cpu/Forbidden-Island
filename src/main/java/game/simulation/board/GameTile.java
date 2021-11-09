@@ -11,12 +11,12 @@ public class GameTile {
     private boolean isStarting;
 
 
-    public GameTile(){
-        name = "";
+    public GameTile(String str, boolean treasure, boolean start){
+        name = str;
         position = new int[0];
         isFlooded = false;
-        isTreasure = false;
-        isStarting = false;
+        isTreasure = treasure;
+        isStarting = start;
     }
 
     public String getName(){
