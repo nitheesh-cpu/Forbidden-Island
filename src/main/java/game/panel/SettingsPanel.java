@@ -1,13 +1,13 @@
+package game.panel;
+
 import javax.swing.*;
 
-public class SettingsPanel extends JFrame
-{
+public class SettingsPanel extends JFrame {
     private JPanel settings;
     private JButton close;
     private JLabel theme;
 
-    public SettingsPanel()
-    {
+    public SettingsPanel() {
         super("Settings");
         setSize(600, 880);
         setLayout(null);
@@ -19,8 +19,7 @@ public class SettingsPanel extends JFrame
         theme = new JLabel("Theme");
     }
 
-    public void setTheme()
-    {
+    public void setTheme() {
 
     }
 }

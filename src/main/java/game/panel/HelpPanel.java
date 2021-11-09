@@ -1,9 +1,8 @@
-import javax.imageio.ImageIO;
+package game.panel;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.util.Objects;
 
 public class HelpPanel extends JFrame {
     public HelpPanel() throws IOException {

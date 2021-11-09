@@ -1,3 +1,5 @@
+package game.panel;
+
 import java.io.IOException;
 
 public class ParentPanel {

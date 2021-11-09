@@ -1,4 +1,7 @@
+package game;
+
 import com.formdev.flatlaf.intellijthemes.FlatNordIJTheme;
+import game.panel.ParentPanel;
 
 import java.io.IOException;
 

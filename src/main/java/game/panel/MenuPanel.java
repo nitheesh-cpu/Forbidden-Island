@@ -1,3 +1,7 @@
+package game.panel;
+
+import game.simulation.GameState;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
