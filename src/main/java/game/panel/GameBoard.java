@@ -11,5 +11,6 @@ public class GameBoard extends JFrame {
 
     public String returnTilePosition(GameTile tile){
         return "";
+        //return (int, int) position in matrix
     }
 }
