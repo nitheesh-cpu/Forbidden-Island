@@ -9,8 +9,4 @@ public class GameBoard extends JFrame {
         allTiles = new GameTile[6][6];
     }
 
-    public String returnTilePosition(GameTile tile){
-        return "";
-        //return (int, int) position in matrix
-    }
 }
