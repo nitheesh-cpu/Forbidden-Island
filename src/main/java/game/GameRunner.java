@@ -9,7 +9,6 @@ public class GameRunner {
 
     public static void main(String[] args) throws IOException {
         FlatNordIJTheme.setup();
-
         ParentPanel bingoGame = new ParentPanel();
 
     }

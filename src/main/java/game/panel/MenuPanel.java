@@ -28,9 +28,9 @@ public class MenuPanel extends JFrame {
         getClass().getClassLoader();
         parentPanel = p;
         try {
-            Kurale = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Kurale-Regular.ttf"))).deriveFont(12f);
-            PNBold = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Proxima Nova Bold.otf"))).deriveFont(15f);
-            PNRegular = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("ProximaNova-Regular.otf"))).deriveFont(12f);
+            Kurale = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Fonts/Kurale-Regular.ttf"))).deriveFont(12f);
+            PNBold = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Fonts/Proxima Nova Bold.otf"))).deriveFont(15f);
+            PNRegular = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Fonts/ProximaNova-Regular.otf"))).deriveFont(12f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(Kurale);
         } catch (FontFormatException | IOException e) {
@@ -39,7 +39,7 @@ public class MenuPanel extends JFrame {
 
         setLayout(new BorderLayout());
         JLabel background = new JLabel();
-        background.setIcon(new ImageIcon(getClass().getClassLoader().getResource("TitleScreen.png")));
+        background.setIcon(new ImageIcon(getClass().getClassLoader().getResource("Images/TitleScreen.png")));
         add(background);
         background.setLayout(null);
         //difficulty input field
