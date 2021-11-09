@@ -1,14 +1,13 @@
 import com.formdev.flatlaf.intellijthemes.FlatNordIJTheme;
 
-import java.io.File;
 import java.io.IOException;
 
 public class GameRunner {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FlatNordIJTheme.setup();
 
-        MenuPanel bingoGame = new MenuPanel();
+        ParentPanel bingoGame = new ParentPanel();
 
     }
 }

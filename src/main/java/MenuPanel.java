@@ -6,10 +6,12 @@ import java.io.IOException;
 import java.util.Objects;
 
 
-public class MenuPanel extends JFrame{
-    private Font Kurale,PNBold,PNRegular;
+public class MenuPanel extends JFrame {
+    private Font Kurale, PNBold, PNRegular;
+    private HelpPanel helpPanel = null;
+    private ParentPanel parentPanel;
 
-    public MenuPanel(){
+    public MenuPanel(ParentPanel p) {
         super("Forbidden Island Menu");
         JFrame.setDefaultLookAndFeelDecorated(true);
         setLayout(new BorderLayout());
@@ -20,6 +22,7 @@ public class MenuPanel extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         getClass().getClassLoader();
+        parentPanel = p;
         try {
             Kurale = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Kurale-Regular.ttf"))).deriveFont(12f);
             PNBold = Font.createFont(Font.TRUETYPE_FONT, Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Proxima Nova Bold.otf"))).deriveFont(15f);
@@ -49,10 +52,10 @@ public class MenuPanel extends JFrame{
         background.add(difficultyDropdown);
 
         //number of players input field
-        JLabel playerLabel=new JLabel("Number of Players:");
-        JSpinner playerSpinner=new JSpinner(new SpinnerNumberModel(4,2,4,1));
-        playerSpinner.setBounds(590,325,150,25);
-        playerLabel.setBounds(591,300,148,25);
+        JLabel playerLabel = new JLabel("Number of Players:");
+        JSpinner playerSpinner = new JSpinner(new SpinnerNumberModel(4, 2, 4, 1));
+        playerSpinner.setBounds(590, 325, 150, 25);
+        playerLabel.setBounds(591, 300, 148, 25);
         playerLabel.setOpaque(true);
         playerLabel.setBackground(new Color(191, 105, 86));
         playerLabel.setFont(PNBold);
@@ -62,13 +65,13 @@ public class MenuPanel extends JFrame{
 
         //How to Play button
         JButton help = new JButton("How to Play");
-        help.setBounds(410,375,150,45);
+        help.setBounds(410, 375, 150, 45);
         help.setFont(PNBold);
         background.add(help);
 
         //Play button
         JButton play = new JButton("Play");
-        play.setBounds(410,425,150,45);
+        play.setBounds(410, 425, 150, 45);
         play.setFont(PNBold);
         background.add(play);
 
@@ -78,11 +81,7 @@ public class MenuPanel extends JFrame{
         help.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    HelpPanel helpPanel = new HelpPanel();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+                parentPanel.toggleHelpPanel();
             }
         });
 
@@ -101,6 +100,7 @@ public class MenuPanel extends JFrame{
                     }
                     break;
                 }
+                parentPanel.hideMenuPanel();
                 GameState gameState = new GameState(difficulty, numPlayers);
             }
         });
