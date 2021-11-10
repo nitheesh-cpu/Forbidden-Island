@@ -1,11 +1,13 @@
 package game.simulation.board;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class WaterLevelMeter extends JPanel {
-    private BufferedImage image;
+    private BufferedImage frame = ImageIO.read(new File(getClass().getClassLoader().getResource("Images/TitleScreen.png")));
     private int height = 800;
     private int width = 300;
     private BufferedImage levelImg;
