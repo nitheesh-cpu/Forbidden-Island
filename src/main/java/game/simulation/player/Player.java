@@ -4,6 +4,7 @@ import game.simulation.board.GameTile;
 import game.simulation.card.Card;
 import game.simulation.card.TreasureCard;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Player
@@ -12,7 +13,7 @@ public class Player
     private boolean deckFilled, hasSunk;
     private String role;
     private int moveNumber;
-    private int[][] position;
+    private int[] position;
 
     public Player(String role)
     {
@@ -21,7 +22,7 @@ public class Player
         hasSunk = false;
         this.role = role;
         moveNumber = 0;
-        position = new int[6][6];
+        position = new int[6];
     }
 
     public void drawCard()
@@ -34,14 +35,24 @@ public class Player
 
     }
 
-    public void disposeTreasure()
+    public void disposeTreasure(TreasureCard c, Player p)
     {
-
+        ArrayList<Card> player = p.getDeck();
+        for(Card card: player)
+        {
+            if(card == c)
+            {
+                player.remove(card);
+            }
+        }
     }
 
     public void disposeCard()
     {
+        if(deckFilled)
+        {
 
+        }
     }
 
     public ArrayList<Card> getDeck()
@@ -49,14 +60,24 @@ public class Player
         return playerDeck;
     }
 
-    public int[][] getPos()
+    public int[] getPos()
     {
         return position;
     }
 
-    public void giveTreasure(TreasureCard c)
+    public void giveTreasure(TreasureCard c, Player send, Player receive)
     {
+        ArrayList<Card> rec = receive.getDeck();
+        ArrayList<Card> sen = send.getDeck();
 
+        for(Card card: sen)
+        {
+            if(card == c)
+            {
+                sen.remove(card);
+                rec.add(card);
+            }
+        }
     }
 
     public void shoreUp(GameTile tile)
@@ -64,7 +85,7 @@ public class Player
 
     }
 
-    public void movePawn(int[] coords)
+    public void movePawn(int[][] coords)
     {
 
     }
