@@ -30,7 +30,6 @@ public class GameState {
     public GameState(int difficulty, int numPlayers) {
         this.numPlayers = numPlayers;
         meter = new WaterLevelMeter();
-        waterLevel = meter.getWaterLevel();
         allRoles = new String[]{"Navigator", "Messenger", "Engineer", "Pilot", "Explorer", "Diver"};
         Random rnd = ThreadLocalRandom.current();
         for (int i = allRoles.length - 1; i > 0; i--)
