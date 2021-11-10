@@ -1,10 +1,10 @@
 package game.simulation.player;
-import game.simulation.GameState;
+//import game.simulation.GameState;
 import game.simulation.board.GameTile;
 import game.simulation.card.Card;
 import game.simulation.card.TreasureCard;
 
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Player
@@ -35,9 +35,11 @@ public class Player
 
     }
 
-    public void disposeTreasure(TreasureCard c, Player p)
+    public void disposeTreasure(TreasureCard c)
     {
-        ArrayList<Card> player = p.getDeck();
+        ArrayList<Card> player = this.playerDeck;
+
+
         for(Card card: player)
         {
             if(card == c)
@@ -47,11 +49,16 @@ public class Player
         }
     }
 
+    public void setDeckFilled(boolean deckFilled) {
+        this.deckFilled = deckFilled;
+    }
+
     public void disposeCard()
     {
+        ArrayList<Card> player = this.playerDeck;
         if(deckFilled)
         {
-
+           player.remove(player.size()-1);
         }
     }
 
@@ -60,10 +67,6 @@ public class Player
         return playerDeck;
     }
 
-    public int[] getPos()
-    {
-        return position;
-    }
 
     public void giveTreasure(TreasureCard c, Player send, Player receive)
     {
@@ -76,22 +79,34 @@ public class Player
             {
                 sen.remove(card);
                 rec.add(card);
+                break;
             }
         }
     }
 
     public void shoreUp(GameTile tile)
     {
+        tile.setFlooded(false);
 
     }
 
-    public void movePawn(int[][] coords)
+    public void movePawn(int[] pos)
     {
+        position = pos;
 
+    }
+
+    public int[] getPos()
+    {
+        return position;
     }
 
     public int getMoveNumber()
     {
         return moveNumber;
+    }
+
+    public void setMoveNumber(int moveNumber) {
+        this.moveNumber = moveNumber;
     }
 }
