@@ -11,12 +11,13 @@ public class GameTile {
     private boolean isStarting;
 
 
-    public GameTile(){
-        name = "";
-        position = new int[0];
+    public GameTile(String str, BufferedImage img, int[] pos, boolean treasure, boolean start){
+        name = str;
+        tile = img;
+        position = pos;
         isFlooded = false;
-        isTreasure = false;
-        isStarting = false;
+        isTreasure = treasure;
+        isStarting = start;
     }
 
     public String getName(){
