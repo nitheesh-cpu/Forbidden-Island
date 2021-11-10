@@ -7,7 +7,7 @@ public class ParentPanel {
     private HelpPanel helpPanel = null;
     private SettingsPanel settingsPanel = null;
 
-    public ParentPanel() throws IOException {
+    public ParentPanel() {
         menuPanel = new MenuPanel(this);
     }
 
