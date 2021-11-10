@@ -11,9 +11,10 @@ public class GameTile {
     private boolean isStarting;
 
 
-    public GameTile(String str, boolean treasure, boolean start){
+    public GameTile(String str, BufferedImage img, int[] pos, boolean treasure, boolean start){
         name = str;
-        position = new int[0];
+        tile = img;
+        position = pos;
         isFlooded = false;
         isTreasure = treasure;
         isStarting = start;
