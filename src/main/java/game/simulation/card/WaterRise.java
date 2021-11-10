@@ -12,4 +12,14 @@ public class WaterRise implements Card {
         type = "WatersRise";
         image = ImageIO.read(getClass().getClassLoader().getResource("Images/TreasureCards/Card_Waters_Rise.png"));
     }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public BufferedImage getImage() {
+        return image;
+    }
 }
