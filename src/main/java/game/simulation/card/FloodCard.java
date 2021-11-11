@@ -6,7 +6,8 @@ public class FloodCard {
     private String tile;
     private BufferedImage card;
 
-    public FloodCard() {
-
+    public FloodCard(String name, BufferedImage img) {
+        tile = name;
+        card = img;
     }
 }
