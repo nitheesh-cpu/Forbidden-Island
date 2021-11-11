@@ -15,9 +15,9 @@ public class Player
     private int moveNumber;
     private int[] position;
 
-    public Player(String role)
+    public Player(String role, ArrayList<String> deck)
     {
-        playerDeck = new ArrayList<Card>();
+
         deckFilled = false;
         hasSunk = false;
         this.role = role;
