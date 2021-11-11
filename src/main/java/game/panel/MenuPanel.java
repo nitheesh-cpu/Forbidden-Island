@@ -105,7 +105,11 @@ public class MenuPanel extends JFrame {
                     break;
                 }
                 parentPanel.hideMenuPanel();
-                GameState gameState = new GameState(difficulty, numPlayers);
+                try {
+                    GameState gameState = new GameState(difficulty, numPlayers);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
     }

@@ -8,6 +8,7 @@ import game.simulation.card.Card;
 import game.simulation.player.Player;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -27,9 +28,9 @@ public class GameState {
     private ArrayList<GameTile> moveableSpaces;
     Iterator<Player> playerIterator;
 
-    public GameState(int difficulty, int numPlayers) {
+    public GameState(int difficulty, int numPlayers) throws IOException {
         this.numPlayers = numPlayers;
-        meter = new WaterLevelMeter();
+        meter = new WaterLevelMeter(difficulty);
         allRoles = new String[]{"Navigator", "Messenger", "Engineer", "Pilot", "Explorer", "Diver"};
         Random rnd = ThreadLocalRandom.current();
         for (int i = allRoles.length - 1; i > 0; i--)
