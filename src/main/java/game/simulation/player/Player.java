@@ -27,7 +27,14 @@ public class Player
 
     public void drawCard(String c)
     {
+        if(deckFilled){
+            this.disposeCard();
+
+        }
         playerDeck.add(c);
+        if(playerDeck.size()==5){
+            this.setDeckFilled(true);
+        }
     }
 
     public void updatePosition(int[] newPos)
