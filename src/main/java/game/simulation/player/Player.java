@@ -22,17 +22,17 @@ public class Player
         hasSunk = false;
         this.role = role;
         moveNumber = 0;
-        position = new int[6];
+        position = new int[2];
     }
 
-    public void drawCard()
+    public void drawCard(String c)
     {
-
+        playerDeck.add(c);
     }
 
-    public void updatePosition()
+    public void updatePosition(int[] newPos)
     {
-
+        position = newPos;
     }
 
     public void disposeTreasure(String treasure)
@@ -41,7 +41,7 @@ public class Player
 
         for(String card: player)
         {
-            if(card == treasure)
+            if(card.equals(treasure))
             {
                 player.remove(card);
             }
@@ -74,7 +74,7 @@ public class Player
 
         for(String card: sen)
         {
-            if(card == treasure)
+            if(card.equals(treasure))
             {
                 sen.remove(card);
                 rec.add(card);
@@ -86,13 +86,11 @@ public class Player
     public void shoreUp(GameTile tile)
     {
         tile.setFlooded(false);
-
     }
 
     public void movePawn(int[] pos)
     {
         position = pos;
-
     }
 
     public int[] getPos()
