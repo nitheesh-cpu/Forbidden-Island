@@ -9,15 +9,15 @@ import java.util.ArrayList;
 
 public class Player
 {
-    private ArrayList<Card> playerDeck;
+    private ArrayList<String> playerDeck;
     private boolean deckFilled, hasSunk;
     private String role;
     private int moveNumber;
     private int[] position;
 
-    public Player(String role)
+    public Player(String role, ArrayList<String> startingDeck)
     {
-        playerDeck = new ArrayList<Card>();
+        playerDeck = startingDeck;
         deckFilled = false;
         hasSunk = false;
         this.role = role;
@@ -35,14 +35,13 @@ public class Player
 
     }
 
-    public void disposeTreasure(TreasureCard c)
+    public void disposeTreasure(String treasure)
     {
-        ArrayList<Card> player = this.playerDeck;
+        ArrayList<String> player = this.playerDeck;
 
-
-        for(Card card: player)
+        for(String card: player)
         {
-            if(card == c)
+            if(card == treasure)
             {
                 player.remove(card);
             }
@@ -55,27 +54,27 @@ public class Player
 
     public void disposeCard()
     {
-        ArrayList<Card> player = this.playerDeck;
+        ArrayList<String> player = this.playerDeck;
         if(deckFilled)
         {
            player.remove(player.size()-1);
         }
     }
 
-    public ArrayList<Card> getDeck()
+    public ArrayList<String> getDeck()
     {
         return playerDeck;
     }
 
 
-    public void giveTreasure(TreasureCard c, Player send, Player receive)
+    public void giveTreasure(String treasure, Player send, Player receive)
     {
-        ArrayList<Card> rec = receive.getDeck();
-        ArrayList<Card> sen = send.getDeck();
+        ArrayList<String> rec = receive.getDeck();
+        ArrayList<String> sen = send.getDeck();
 
-        for(Card card: sen)
+        for(String card: sen)
         {
-            if(card == c)
+            if(card == treasure)
             {
                 sen.remove(card);
                 rec.add(card);
