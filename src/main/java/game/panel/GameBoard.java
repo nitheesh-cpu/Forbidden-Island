@@ -12,4 +12,7 @@ public class GameBoard extends JFrame {
     public GameTile[][] getAllTiles() {
         return allTiles;
     }
+    public GameTile getTile(int[] pos){
+        return allTiles[pos[0]][pos[1]];
+    }
 }
