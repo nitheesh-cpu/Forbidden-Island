@@ -113,4 +113,12 @@ public class Player
     public void setMoveNumber(int moveNumber) {
         this.moveNumber = moveNumber;
     }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setPosition(int[] pos) {
+        position = pos;
+    }
 }
