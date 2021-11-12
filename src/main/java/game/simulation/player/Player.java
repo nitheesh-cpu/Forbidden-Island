@@ -22,7 +22,7 @@ public class Player
         hasSunk = false;
         this.role = role;
         moveNumber = 0;
-        position = new int[6];
+        position = new int[2];
     }
 
     public void drawCard()
@@ -107,5 +107,13 @@ public class Player
 
     public void setMoveNumber(int moveNumber) {
         this.moveNumber = moveNumber;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setPosition(int[] pos) {
+        position = pos;
     }
 }
