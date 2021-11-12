@@ -16,6 +16,7 @@ public class VictoryPanel extends JFrame
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
 
         try
         {
