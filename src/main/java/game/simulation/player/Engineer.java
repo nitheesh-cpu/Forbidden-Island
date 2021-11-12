@@ -13,7 +13,24 @@ public class Engineer {
     }
 
     public ArrayList<ArrayList<Integer>> getMoveableTiles(int[] pos){
-      //  if(GameBoard.getAllTiles())
+        ArrayList<ArrayList<Integer>> temp = new ArrayList<ArrayList<Integer>>();
+        ArrayList <Integer> newPos = new ArrayList<Integer>;
+        newPos.add(pos[0]);
+        newPos.add(pos[1]+1);
+        temp.add(newPos);
+        //newPos.removeAll();
+        newPos.add(pos[0] + 1);
+        newPos.add(pos[1]);
+        temp.add(newPos);
+      //  newPos.removeAll();
+        newPos.add(pos[0]);
+        newPos.add(pos[1]-1);
+        temp.add(newPos);
+    //    newPos.removeAll();
+        newPos.add(pos[0] -1);
+        newPos.add(pos[1]);
+        temp.add(newPos);
+
         return moveableTiles;
     }
 }
