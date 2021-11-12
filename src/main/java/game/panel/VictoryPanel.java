@@ -7,7 +7,7 @@ import java.util.Objects;
 public class VictoryPanel extends JFrame
 {
     private Font PNBold;
-    private int WIDTH = 300, HEIGHT = 300;
+    private final int WIDTH = 300, HEIGHT = 300;
 
     public VictoryPanel(String title)
     {

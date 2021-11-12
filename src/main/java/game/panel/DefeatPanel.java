@@ -7,7 +7,7 @@ import java.util.Objects;
 public class DefeatPanel extends JFrame
 {
     private Font PNBold;
-    private int WIDTH = 300, HEIGHT = 300;
+    private final int WIDTH = 300, HEIGHT = 300;
 
     public DefeatPanel(String title)
     {
