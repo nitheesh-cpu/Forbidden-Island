@@ -9,6 +9,7 @@ public class TreasurePiece {
 
     public TreasurePiece(String color) {
         this.color = color;
+        isCaptured = false;
     }
 
     public void setCaptured(Player captured) {

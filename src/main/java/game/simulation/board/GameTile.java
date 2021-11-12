@@ -11,13 +11,14 @@ public class GameTile {
     private boolean isStarting;
 
 
-    public GameTile(String str, BufferedImage img, int[] pos, boolean treasure, boolean start){
+    public GameTile(String str, BufferedImage img) {
         name = str;
         tile = img;
-        position = pos;
         isFlooded = false;
-        isTreasure = treasure;
-        isStarting = start;
+        isTreasure = str.equals("Cave of Shadows") || str.equals("Tidal Palace") || str.equals("Whispering Garden") ||
+                str.equals("Temple of the Moon") || str.equals("Cave of Embers") || str.equals("Coral Palace") ||
+                str.equals("Temple of the Sun") || str.equals("Howling Garden");
+        isStarting = str.equals("Fools Landing") || str.equals("Iron Gate") || str.equals("Bronze Gate") || str.equals("Gold Gate") || str.equals("Copper Gate");
     }
 
     public String getName(){
