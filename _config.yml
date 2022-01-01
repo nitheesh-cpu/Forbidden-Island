@@ -1,2 +1,3 @@
-remote_theme: broccolini/swiss
-theme_color: black
+theme: minima
+minima:
+  skin: dark
