@@ -1,5 +1,7 @@
 ## About this Project
 
+This project is a recreation of the board game _Forbidden Island_ in Java. Forbidden Island is a 2-4 player cooperative multiplayer board game in which players must move around the board in attempts to retrieve all four treasures and escape before the island sinks. Players are given the choice between moving, shoring up tiles, trading, and use cards
+
 You can use the [editor on GitHub](https://github.com/nitheesh-cpu/ForbiddenIslandProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
