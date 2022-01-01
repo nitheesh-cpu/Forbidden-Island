@@ -1,39 +1,17 @@
 ## About this Project
 
-This project is a recreation of the board game _Forbidden Island_ in Java. Forbidden Island is a 2-4 player cooperative multiplayer board game in which players must move around the board in attempts to retrieve all four treasures and escape before the island sinks. Players are given the choice between moving, shoring up tiles, trading, and use cards
+This project is a recreation of the board game _Forbidden Island_ in Java. Forbidden Island is a 2-4 player cooperative multiplayer board game in which players must move around the board in attempts to retrieve all four treasures and escape before the island sinks. Players are given the choice between moving, shoring up tiles, trading, and use cards. Each player will be assigned a role which has a special ability to help them.
 
 You can use the [editor on GitHub](https://github.com/nitheesh-cpu/ForbiddenIslandProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### How to Play
 
-### Markdown
+Each turn, players will be able to make three actions (Move, Shore up, Trade, or Retrieve Treasure). After the player is done with their actions, they will draw flood cards which will flood the corresponding tile and treasure cards which will be added to their inventory, with a max of 5 cards per player. The players will have to communicate to get four of each treasure card and go to each treasure tile to retrieve that treasure. Helicopter Lift and Sandbag cards can be used at anytime without counting as an action. Once the players have retrieved all four treasure they must all go back to Fools Landing and use a Helicopter Lift to escape from the island and win the game. If the tile a player is on sinks and the player cannot swim away, or if both the tiles for an unclaimed treasure sink, the game ends.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+For more in-depth instructions press the "Help" button or the "?" button in game to view the game's instructions.
 
-```markdown
-Syntax highlighted code block
+### Instructions
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nitheesh-cpu/Bingo-Maven/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+1. [Download](https://www.oracle.com/java/technologies/downloads/) the latest JRE to be able to open the .jar file
+2. Download the project .jar file from the GitHub
+3. Run the file and play
