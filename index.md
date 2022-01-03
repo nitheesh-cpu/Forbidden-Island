@@ -14,4 +14,4 @@ For more in-depth instructions press the "Help" button or the "?" button in game
 
 1. [Download](https://www.oracle.com/java/technologies/downloads/) the latest JRE to be able to open the .jar file
 2. [Download](https://github.com/nitheesh-cpu/Forbidden-Island/releases/download/Download/ForbiddenIslandFX.jar) the project .jar file from the GitHub
-3. Run the file and play
+3. Run the file
