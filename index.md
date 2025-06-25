@@ -23,7 +23,7 @@ subheading: "A Java recreation of the cooperative board game where teamwork save
                 This project is a recreation of the board game <em>Forbidden Island</em> in Java. Forbidden Island is a 2-4 player cooperative multiplayer board game in which players must move around the board in attempts to retrieve all four treasures and escape before the island sinks.
             </p>
             <p class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
-                Built with Java Swing and featuring the modern <a href="https://github.com/JFormDesigner/FlatLaf" target="_blank" class="text-primary-600 hover:text-primary-700 dark:text-primary-500">FlatLaf</a> Nord theme, this recreation captures the excitement and strategic depth of the original cooperative board game. As highlighted in the [Forbidden Island JavaScript blog post](https://blog.homeforfiction.com/2022/03/21/forbidden-island-javascript-app-creation/), the game represents "the most genuine form of creation" - built for the pure joy of recreating a beloved game experience.
+                Built with Java Swing and featuring the modern <a href="https://github.com/JFormDesigner/FlatLaf" target="_blank" class="text-primary-600 hover:text-primary-700 dark:text-primary-500">FlatLaf</a> Nord theme, this recreation captures the excitement and strategic depth of the original cooperative board game. As highlighted in the <a href="https://blog.homeforfiction.com/2022/03/21/forbidden-island-javascript-app-creation/">Forbidden Island JavaScript blog post</a>, the game represents "the most genuine form of creation" - built for the pure joy of recreating a beloved game experience.
             </p>
         </div>
 
